@@ -1,13 +1,13 @@
 import React from "react";
 
-interface ButtonArgument {
+interface ResultArgument {
   title: string;
-  r: number;
+  result: number;
 }
 
-const Result = ({ title, r }: ButtonArgument) => (
+const Result = ({ title, result }: ResultArgument) => (
   <div>
-    {title}: <span>{r}</span>
+    {title}: <span>{result}</span>
   </div>
 );
 
