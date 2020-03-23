@@ -1,10 +1,10 @@
 import React from "react";
 
 interface ButtonArgument {
-  w: string;
-  onClick: () => void;
+  character: string | number;
+  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
-const CommonBtn = ({ w, onClick }: ButtonArgument) => <button onClick={() => onClick()}>{w}</button>;
+const CommonBtn = ({ character, onClick }: ButtonArgument) => <button onClick={onClick}>{character}</button>;
 
 export default CommonBtn;

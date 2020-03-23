@@ -1,10 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import NumBtn from "../components/NumBtn";
 import Result from "../components/Result";
 import { GetAllActions } from "../modules/CalculatorContainer";
 import { AllState } from "src/store";
-import OperationButton from "src/components/OperationButton";
 import { OPT } from "src/services/CalculatorService";
 import CommonBtn from "src/components/CommonBtn";
 
@@ -26,28 +24,28 @@ export const CalculatorContainer = () => {
   return (
     <div>
       <div>
-        <NumBtn n={1} onClick={onNumClick} />
-        <NumBtn n={2} onClick={onNumClick} />
-        <NumBtn n={3} onClick={onNumClick} />
-        <OperationButton w={"/"} opt={"DIV"} onClick={onOperationClick} />
+        <CommonBtn character={1} onClick={() => onNumClick(1)} />
+        <CommonBtn character={2} onClick={() => onNumClick(2)} />
+        <CommonBtn character={3} onClick={() => onNumClick(3)} />
+        <CommonBtn character={"/"} onClick={() => onOperationClick("DIV")} />
       </div>
       <div>
-        <NumBtn n={4} onClick={onNumClick} />
-        <NumBtn n={5} onClick={onNumClick} />
-        <NumBtn n={6} onClick={onNumClick} />
-        <OperationButton w={"*"} opt={"MUL"} onClick={onOperationClick} />
+        <CommonBtn character={4} onClick={() => onNumClick(4)} />
+        <CommonBtn character={5} onClick={() => onNumClick(5)} />
+        <CommonBtn character={6} onClick={() => onNumClick(6)} />
+        <CommonBtn character={"*"} onClick={() => onOperationClick("MUL")} />
       </div>
       <div>
-        <NumBtn n={7} onClick={onNumClick} />
-        <NumBtn n={8} onClick={onNumClick} />
-        <NumBtn n={9} onClick={onNumClick} />
-        <OperationButton w={"+"} opt={"ADD"} onClick={onOperationClick} />
+        <CommonBtn character={7} onClick={() => onNumClick(7)} />
+        <CommonBtn character={8} onClick={() => onNumClick(8)} />
+        <CommonBtn character={9} onClick={() => onNumClick(9)} />
+        <CommonBtn character={"+"} onClick={() => onOperationClick("ADD")} />
       </div>
       <div>
-        <CommonBtn w={"c"} onClick={onResetClick} />
-        <NumBtn n={0} onClick={onNumClick} />
-        <CommonBtn w={"="} onClick={onEqualClick} />
-        <OperationButton w={"-"} opt={"SUB"} onClick={onOperationClick} />
+        <CommonBtn character={"c"} onClick={onResetClick} />
+        <CommonBtn character={0} onClick={() => onNumClick(0)} />
+        <CommonBtn character={"="} onClick={onEqualClick} />
+        <CommonBtn character={"-"} onClick={() => onOperationClick("SUB")} />
       </div>
       <Result title={"Temporary"} r={calculator.temporaryValue} />
       <Result title={"Result"} r={calculator.showingResult ? calculator.resultValue : calculator.inputValue} />
