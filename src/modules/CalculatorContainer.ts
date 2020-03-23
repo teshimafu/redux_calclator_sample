@@ -23,13 +23,13 @@ const onResetClick = () => ({
   type: RESET
 });
 
-export type ClickActions =
+type ClickActions =
   | ReturnType<typeof onNumClick>
   | ReturnType<typeof onOperationClick>
   | ReturnType<typeof onEqualClick>
   | ReturnType<typeof onResetClick>;
 
-export interface AppState {
+interface CalcState {
   inputValue: number;
   resultValue: number;
   temporaryValue: number;
@@ -44,7 +44,7 @@ export const GetAllActions = {
   onResetClick: onResetClick
 };
 
-const initialAppState: AppState = {
+const initialAppState: CalcState = {
   inputValue: 0,
   temporaryValue: 0,
   resultValue: 0,

@@ -1,12 +1,12 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import NumBtn from "../components/atoms/NumBtn";
-import Result from "../components/atoms/Result";
+import NumBtn from "../components/NumBtn";
+import Result from "../components/Result";
 import { GetAllActions } from "../modules/CalculatorContainer";
 import { AllState } from "src/store";
-import OperationButton from "src/components/atoms/OperationButton";
+import OperationButton from "src/components/OperationButton";
 import { OPT } from "src/services/CalculatorService";
-import CommonBtn from "src/components/atoms/CommonBtn";
+import CommonBtn from "src/components/CommonBtn";
 
 export const CalculatorContainer = () => {
   const dispatch = useDispatch();
