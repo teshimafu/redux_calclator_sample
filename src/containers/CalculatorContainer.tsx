@@ -47,8 +47,8 @@ export const CalculatorContainer = () => {
         <CommonBtn character={"="} onClick={onEqualClick} />
         <CommonBtn character={"-"} onClick={() => onOperationClick("SUB")} />
       </div>
-      <Result title={"Temporary"} r={calculator.temporaryValue} />
-      <Result title={"Result"} r={calculator.showingResult ? calculator.resultValue : calculator.inputValue} />
+      <Result title={"Temporary"} result={calculator.temporaryValue} />
+      <Result title={"Result"} result={calculator.showingResult ? calculator.resultValue : calculator.inputValue} />
     </div>
   );
 };
